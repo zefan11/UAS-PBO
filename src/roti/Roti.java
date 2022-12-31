@@ -10,7 +10,7 @@ import java.util.HashMap;
  *
  * @author BrxxN
  */
-public class Roti {
+public abstract class Roti {
     
     // Attribute untuk menyimpan nama Jenis Roti
     protected String jenisRoti;
@@ -55,5 +55,14 @@ public class Roti {
             System.exit(0);
         }
     };
+    
+    // Abstract Method untuk memilih varian sekaligus validasi
+    public abstract void pilihVarian(int nomorVarian);
+    
+    // Absrtract Method untuk menghitung total bahan per varian
+    protected abstract void hitungVarian();
+    
+    // Entahlah tapi ini abstract method untuk menghitung total BERAT bahan yang diperlukan sesuai komposisi dan jumlah pesanan
+    protected abstract void hitungTotalBahan();
 
 }
