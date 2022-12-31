@@ -32,8 +32,15 @@ public class Manis extends Roti {
         this.jenisRoti = "Roti Manis";
     }
 
+    // Method untuk melakukan validasi input nomor Varian
     @Override
     public void pilihVarian(int nomorVarian) {
+        if (nomorVarian < 0 || nomorVarian > 3){
+            System.out.println("Varian Tidak Valid!");
+            System.exit(0);
+        }
+        
+        this.nomorVarian = nomorVarian;
     }
 
     @Override
