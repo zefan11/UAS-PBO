@@ -71,6 +71,21 @@ public class Manis extends Roti {
                 System.exit(0);
             }
         }
+        
+        // Menambahkan bahan filling ke objek varian untuk perhitungan total bahan
+        for (String k : this.filling.keySet()){
+            this.varian.put(k, this.filling.get(k));
+        }
+        
+        // Menambahkan bahan topping ke objek varian untuk perhitungan total bahan
+        for (String k : this.topping.keySet()){
+            if (this.varian.containsKey(k)){
+                Integer sum = this.varian.get(k) + this.topping.get(k);
+                this.varian.put(k, sum);
+                continue;
+            }
+            this.varian.put(k, this.topping.get(k));
+        }
     }
 
     // Method untuk menghitung BERAT per bahan yang diperlukan berdasarkan banyaknya pesanan dan komposisi
