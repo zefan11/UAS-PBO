@@ -8,6 +8,17 @@ package roti;
  *
  * @author BrxxN
  */
-public class Manis {
-    
+public class Manis extends Roti {
+
+    @Override
+    public void pilihVarian(int nomorVarian) {
+    }
+
+    @Override
+    protected void hitungVarian() {
+    }
+
+    @Override
+    protected void hitungTotalBahan() {
+    }
 }
