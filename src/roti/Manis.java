@@ -45,6 +45,32 @@ public class Manis extends Roti {
 
     @Override
     protected void hitungVarian() {
+        
+        // Switch Case untuk menghitung total bahan berdasarkan pilihan Varian
+        switch (this.nomorVarian){
+            case 1 -> {
+                this.filling.put("Keju", 5 * this.jumPesanan);
+                this.filling.put("Coklat", 5 * this.jumPesanan);
+                
+                this.topping.put("Coklat", 5 * this.jumPesanan);
+            }
+                
+            case 2 -> {
+                this.filling.put("Selai Red Bean", 10 * this.jumPesanan);
+                
+                this.topping.put("Krim Vanilla", 5 * this.jumPesanan);
+            }
+            
+            case 3 -> {
+                this.filling.put("Keju", 10 * this.jumPesanan);
+                this.filling.put("Sosis", 10 * this.jumPesanan);
+            }
+            
+            default -> {
+                System.out.println("Varian Tidak Ada");
+                System.exit(0);
+            }
+        }
     }
 
     // Method untuk menghitung BERAT per bahan yang diperlukan berdasarkan banyaknya pesanan dan komposisi
