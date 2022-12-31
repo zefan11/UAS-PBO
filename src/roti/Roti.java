@@ -4,6 +4,8 @@
  */
 package roti;
 
+import java.util.HashMap;
+
 /**
  *
  * @author BrxxN
@@ -38,5 +40,10 @@ public class Roti {
     
     // Attribute untuk menyimpan pilihan varian
     protected int nomorVarian;
+    
+    // Attribute untuk menyimpan Filling, Topping, Varian
+    protected HashMap<String, Integer> filling = new HashMap<String, Integer>();
+    protected HashMap<String, Integer> topping = new HashMap<String, Integer>();
+    protected HashMap<String, Integer> varian = new HashMap<String, Integer>();
 
 }
