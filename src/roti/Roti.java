@@ -45,5 +45,15 @@ public class Roti {
     protected HashMap<String, Integer> filling = new HashMap<String, Integer>();
     protected HashMap<String, Integer> topping = new HashMap<String, Integer>();
     protected HashMap<String, Integer> varian = new HashMap<String, Integer>();
+    
+    // Validasi Jumlah Pesanan supaya tidak minus
+    public void inputPesanan(int jum){
+        if (jum > 0){
+            this.jumPesanan = jum;
+        } else {
+            System.out.println("Pesanan tidak boleh minus");
+            System.exit(0);
+        }
+    };
 
 }
