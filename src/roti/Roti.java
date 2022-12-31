@@ -64,5 +64,36 @@ public abstract class Roti {
     
     // Entahlah tapi ini abstract method untuk menghitung total BERAT bahan yang diperlukan sesuai komposisi dan jumlah pesanan
     protected abstract void hitungTotalBahan();
+    
+    // Method untuk menampilkan BERAT bahan yang diperlukan berdasarkan banyaknya pesanan dan komposisi
+    public void tampilTotalBahan(){
+        hitungVarian();
+        hitungTotalBahan();
+        System.out.println("=============================================================================");
+        System.out.println("=============================================================================");
+        System.out.println("Total bahan yang diperlukan untuk membuat " + this.jumPesanan + " pcs " + this.jenisRoti);
+        System.out.println("Varian : " + this.nomorVarian);
+        System.out.println("============================================================================");
+        System.out.printf("Tepung Terigu = %.2f gr \n", this.tepungTerigu);
+        System.out.printf("Gula Pasir    = %.2f gr \n", this.gulaPasir);
+        System.out.printf("Butter        = %.2f gr \n", this.butter);
+        System.out.printf("Ragi          = %.2f gr \n", this.ragi);
+        System.out.printf("Susu Bubuk    = %.2f gr \n", this.susuBubuk);
+        System.out.printf("Susu Cair     = %.2f gr \n", this.susuCair);
+        System.out.printf("Telur         = %.2f gr \n", this.telur);
+        System.out.printf("Es Batu       = %.2f gr \n", this.esBatu);
+        System.out.println("============================================================================");
+        
+        System.out.println("Isian :\n");
+        
+        for (String k : this.varian.keySet()){
+            System.out.println( k + " = " + this.varian.get(k) + " gr");
+        }
+        
+        System.out.println("============================================================================");
+        System.out.printf("Berat Total Bahan  Roti  = %.2f gr \n", this.totalDough);        
+        System.out.println("============================================================================");
+        System.out.println("============================================================================");
+    };
 
 }
