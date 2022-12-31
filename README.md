@@ -1,3 +1,3 @@
 # UAS-PBO
 
--Repository Untuk Project Akhir Mata Kuliah Pemrograman Berbasis Objek
+- Repository Untuk Project Akhir Mata Kuliah Pemrograman Berbasis Objek
